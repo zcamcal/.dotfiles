@@ -12,7 +12,7 @@ output * bg `find $background_path -type f | shuf -n 1` fill
 #
 ### Screenshot
 bindsym $mod+p exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') $(xdg-user-dir PICTURES)/$(date +'%Y-%m-%d-%H%M%S.png')
-bindsym $mod+Shift+p exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/$(date +'%Y-%m-%d-%H%M%S.png')
+bindsym $mod+Shift+p exec grim -g "$(slurp)" - | wl-copy
 
 # Home row direction keys, like vim
 set $left h
@@ -59,20 +59,6 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
-### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
-
 ### Key bindings
 #
 # Basics:
@@ -98,6 +84,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
 #
 # Moving around:
 #
@@ -149,17 +136,18 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
 #
 # Workspaces apps:
 #
     #foot terminal
-    workspace 1
+    workspace 1 
     exec foot
 
-    workspace 2
+    workspace 2 
     exec firefox
 
-    workspace 3
+    workspace 3 
     exec librewolf 
 
 #
