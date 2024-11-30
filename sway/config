@@ -8,6 +8,7 @@ set $background_path ~/.config/wallpaper
 #
 ### Output configuration
 output * bg `find $background_path -type f | shuf -n 1` fill
+bindsym $mod+Shift+w output * bg `find $background_path -type f | shuf -n 1` fill
 
 #
 ### Screenshot
