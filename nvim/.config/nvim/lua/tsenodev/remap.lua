@@ -7,3 +7,5 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<leader>zig", "<cmd>LspRestart<cr>")
 
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+
+vim.keymap.set("n", "<leader>ch", "<cmd>nohlsearch<cr>")

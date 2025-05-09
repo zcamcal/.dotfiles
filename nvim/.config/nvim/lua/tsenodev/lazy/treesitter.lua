@@ -18,6 +18,7 @@ return {
         "typescript",
         "css",
         "groovy",
+        "angular"
       },
 
       -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -51,6 +52,13 @@ return {
         branch = "master",
       },
     }
+
+    vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
+      pattern = { "*.component.html", "*.container.html" },
+      callback = function()
+        vim.treesitter.start(nil, "angular")
+      end,
+    })
 
     vim.treesitter.language.register("templ", "templ")
   end

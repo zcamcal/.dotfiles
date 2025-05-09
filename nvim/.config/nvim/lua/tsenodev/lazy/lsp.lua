@@ -41,6 +41,7 @@ return {
         "jsonls",
         "ts_ls",
         "groovyls",
+        "angularls",
       },
 
       handlers = {
