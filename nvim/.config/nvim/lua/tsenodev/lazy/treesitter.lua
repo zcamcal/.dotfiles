@@ -13,12 +13,9 @@ return {
         "json",
         "bash",
         "html",
-        "javascript",
         "jsdoc",
-        "typescript",
         "css",
         "groovy",
-        "angular"
       },
 
       -- Install parsers synchronously (only applied to `ensure_installed`)

@@ -39,9 +39,6 @@ return {
         "cssls",
         "eslint",
         "jsonls",
-        "ts_ls",
-        "groovyls",
-        "angularls",
       },
 
       handlers = {
