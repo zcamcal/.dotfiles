@@ -43,3 +43,4 @@ alias kdev="kubectl --kubeconfig=${DO_SECRET_STATING_K}"
 #alias bootdev="/home/nonimo/go/bin/bootdev"
 #alias hellogo="/home/nonimo/go/bin/hellogo"
 export PATH=$PATH:/home/nonimo/go/bin
+umask 0077
