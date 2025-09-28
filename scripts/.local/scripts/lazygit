@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# used links
+# https://wafatech.sa/blog/linux/linux-security/enhancing-ssh-agent-security-on-linux-servers-best-practices/
+
 ( 
   eval "$(ssh-agent -s)"
   ssh-add -t 10m ~/.ssh/gh
