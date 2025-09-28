@@ -2,10 +2,11 @@
 
 ( 
   eval "$(ssh-agent -s)"
-  ssh-add ~/.ssh/gh
+  ssh-add -t 10m ~/.ssh/gh
 
   GIT_SSH_COMMAND='ssh -A' lazygit
 
   pkill ssh-agent
+  ssh-add -d ~/.ssh/gh
 )
 
