@@ -6,7 +6,7 @@
 
   GIT_SSH_COMMAND='ssh -A' lazygit
 
-  pkill ssh-agent
   ssh-add -d ~/.ssh/gh
+  pkill ssh-agent
 )
 
