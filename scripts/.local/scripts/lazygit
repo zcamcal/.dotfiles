@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # used links
+# https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch06_03.htm
 # https://wafatech.sa/blog/linux/linux-security/enhancing-ssh-agent-security-on-linux-servers-best-practices/
 
 ( 
