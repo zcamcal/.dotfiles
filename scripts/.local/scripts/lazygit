@@ -1,0 +1,11 @@
+#!/bin/bash
+
+( 
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/gh
+
+  GIT_SSH_COMMAND='ssh -A' lazygit
+
+  pkill ssh-agent
+)
+
