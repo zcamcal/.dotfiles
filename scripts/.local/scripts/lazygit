@@ -1,8 +1,12 @@
 #!/bin/bash
 
 # used links
+# https://rabexc.org/posts/pitfalls-of-ssh-agents
 # https://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch06_03.htm
 # https://wafatech.sa/blog/linux/linux-security/enhancing-ssh-agent-security-on-linux-servers-best-practices/
+#
+# How backup keys
+# https://gitlab.com/hasecilu/dotfiles/-/snippets/2542670
 
 ( 
   eval "$(ssh-agent -s)"
