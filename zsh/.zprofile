@@ -6,4 +6,3 @@ export NVM_DIR="$HOME/.config/nvm"
 
 bindkey -s ^f "~/.local/scripts/tmux-sessionizer\n"
 bindkey -s ^l "~/.local/scripts/lazygit\n"
-bindkey -s ^m "vi-mongo\n"
